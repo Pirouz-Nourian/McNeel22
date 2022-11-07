@@ -2,10 +2,12 @@ from compas.geometry import Point
 from compas.geometry import Box
 from compas.geometry import Frame
 from compas.geometry import Translation
+from compas.geometry import Rotation
 from compas_view2.app import App
+from math import radians
 
 # create a box in the world coordinate system
-box1 = Box(frame=Frame.worldXY(), xsize=1, ysize=1, zsize=1)
+box1 = Box(frame=Frame.worldXY(), xsize=1, ysize=2, zsize=2)
 
 # define a new location for the box
 location = Point(0.5, 0.5, 0.5)
@@ -13,10 +15,11 @@ location = Point(0.5, 0.5, 0.5)
 # compute a translation transformation
 vector = location - box1.frame.point
 translation = Translation.from_vector(vector)
+rotation= Rotation.from_axis_and_angle([1,0,0],radians(90))
 
 # generae a transformed copy of the box
 box2 = box1.transformed(translation)
-
+box3=box2.transformed(rotation)
 # =============================================================================
 # Viz
 # =============================================================================

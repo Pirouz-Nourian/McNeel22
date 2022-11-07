@@ -10,3 +10,8 @@ box = Box(frame=frame, xsize=1, ysize=1, zsize=1)
 
 
 print(box)
+print(box.xsize)
+print(box.edges)
+print(box.faces)
+print(type(box))
+from compas_view2.app import App

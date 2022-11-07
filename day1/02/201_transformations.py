@@ -9,6 +9,11 @@ frame = Frame([0.5, 0.5, 0.5], [1, 0, 0], [0, 1, 0])
 # define a box in the coordinate system
 box = Box(frame=frame, xsize=1, ysize=1, zsize=1)
 
+# also try alternative constructors e.g. 
+#Box.from_bounding_box()
+# diagonal=[0.0, 0.0, 0.0], [1.0, 1.0, 1.0]
+# box=Box.from_diagonal(diagonal)
+
 # =============================================================================
 # Viz
 # =============================================================================

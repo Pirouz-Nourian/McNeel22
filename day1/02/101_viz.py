@@ -16,8 +16,10 @@ viewer = App()
 # and the edges in dark(er) blue
 viewer.add(
     box,
-    facecolor=Color.blue().lightened(50),
+    facecolor=Color.blue().lightened(20),
     linecolor=Color.blue(),
+    opacity=0.5,
+    linewidth=0.4
 )
 
 viewer.show()
