@@ -5,6 +5,7 @@ from compas.geometry import Frame
 from compas.geometry import Transformation
 from compas.utilities import linspace
 from compas.artists import Artist
+import compas_rhino
 
 
 points = [
@@ -30,15 +31,19 @@ for frame in frames:
 # Viz
 # =============================================================================
 
-Artist.clear()
-
-artist = Artist(curve)
+artist = Artist(curve, layer="WS::Curve")
+artist.clear_layer()
 artist.draw()
 
+compas_rhino.clear_layer("WS::frames")
 for frame in frames:
-    artist = Artist(frame, scale=0.5)
+    artist = Artist(frame, scale=0.5, layer="WS::frames")
     artist.draw()
 
+compas_rhino.clear_layer("WS::boxes")
+
 for box in boxes:
-    artist = Artist(box)
+    artist = Artist(box, layer="WS::boxes")
     artist.draw()
+
+## can also use the guids to delete the last drawn objects guids=artist.draw()

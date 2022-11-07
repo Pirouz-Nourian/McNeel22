@@ -1,0 +1,72 @@
+{
+    "curve": {
+        "dtype": "compas.geometry/NurbsCurve",
+        "value": {
+            "points": [
+                [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                [
+                    3.0,
+                    3.0,
+                    0.0
+                ],
+                [
+                    6.0,
+                    -6.0,
+                    3.0
+                ],
+                [
+                    9.0,
+                    0.0,
+                    0.0
+                ]
+            ],
+            "weights": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "knots": [
+                0.0,
+                1.0
+            ],
+            "multiplicities": [
+                4,
+                4
+            ],
+            "degree": 3,
+            "is_periodic": false
+        },
+        "guid": "ead6889e-8600-4f87-af3f-7d06bc1577bb"
+    },
+    "box": {
+        "dtype": "compas.geometry/Box",
+        "value": {
+            "frame": {
+                "point": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "xaxis": [
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "yaxis": [
+                    0.0,
+                    1.0,
+                    0.0
+                ]
+            },
+            "xsize": 0.8,
+            "ysize": 0.5,
+            "zsize": 0.3
+        },
+        "guid": "39e8aeb9-7126-45ac-9de7-ec61b4288b44"
+    }
+}

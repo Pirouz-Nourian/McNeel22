@@ -17,6 +17,6 @@ curve = NurbsCurve.from_points(points)
 
 viewer = App()
 
-viewer.add(curve)
+viewer.add(curve.to_polyline())
 
 viewer.show()

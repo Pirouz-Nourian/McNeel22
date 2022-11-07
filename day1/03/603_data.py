@@ -1,6 +1,6 @@
 import os
 import compas
-
+from compas_view2.app import App
 # =============================================================================
 # Import
 # =============================================================================
@@ -13,3 +13,7 @@ box = data["box"]
 
 print(curve)
 print(box)
+
+viewer=App()
+viewer.add(curve.to_polyline())
+viewer.show()

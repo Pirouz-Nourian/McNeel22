@@ -7,7 +7,7 @@ from compas_view2.app import App
 # Import
 # =============================================================================
 
-filepath = os.path.join(os.path.dirname(__file__), "session.json")
+filepath = os.path.join(os.path.dirname(__file__), "curve_from_rhino.json")
 data = compas.json_load(filepath)
 
 # =============================================================================

@@ -11,6 +11,6 @@ curve = RhinoCurve.from_guid(guid).to_compas()
 # =============================================================================
 
 data = {"curve": curve}
-filepath = os.path.join(os.path.dirname(__file__), "session.json")
+filepath = os.path.join(os.path.dirname(__file__), "curve_from_rhino.json")
 
 compas.json_dump(data, filepath)

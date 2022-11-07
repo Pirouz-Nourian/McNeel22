@@ -5,6 +5,8 @@ from compas.geometry import NurbsCurve
 from compas.geometry import Box
 from compas.geometry import Frame
 
+from compas_view2.app import App
+
 
 points = [
     Point(0, 0, 0),
@@ -21,6 +23,7 @@ box = Box(Frame.worldXY(), 0.8, 0.5, 0.3)
 # =============================================================================
 
 data = {"curve": curve, "box": box}
+
 filepath = os.path.join(os.path.dirname(__file__), "session.json")
 
 compas.json_dump(data, filepath)

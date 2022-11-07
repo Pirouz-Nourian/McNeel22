@@ -23,6 +23,11 @@ for t in linspace(curve.domain[0], curve.domain[1], 10):
 
 box = Box(Frame.worldXY(), 0.8, 0.5, 0.3)
 
+boxes=[]
+for frame in frames:
+    X=Transformation.from_frame_to_frame(box.frame,frame)
+    boxes.append(box.transformed(X))
+
 transformation = Transformation.from_frame_to_frame(box.frame, frames[3])
 
 box.transform(transformation)
@@ -38,6 +43,6 @@ viewer.view.camera.look_at([0, 0, 3])
 viewer.add(curve.to_polyline())
 viewer.add(Polyline(curve.points), show_points=True)
 viewer.add(Collection(frames, [{"size": 0.5} for frame in frames]), linewidth=3)
-viewer.add(box)
+viewer.add(Collection(boxes))
 
 viewer.show()
