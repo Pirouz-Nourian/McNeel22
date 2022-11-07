@@ -6,6 +6,7 @@ from compas.geometry import Frame
 from compas.geometry import Box
 from compas.utilities import linspace
 from compas.utilities import pairwise
+from compas.utilities import window
 from compas.artists import Artist
 
 # =============================================================================

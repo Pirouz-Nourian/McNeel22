@@ -51,10 +51,11 @@ frames_0 = [curve.frame_at(t) for t in params_0]
 
 opoints_0 = []
 ipoints_0 = []
-
+boxes=[]
 for frame in frames_0:
     plane = Plane(frame.point, frame.xaxis)
-    bbox = Box(Frame(frame.point, frame.yaxis, frame.zaxis), 1, 1, 1)
+    bbox = Box(Frame(frame.point, frame.yaxis, frame.zaxis), 1, 1, 0.1)
+    boxes.append(bbox)
     surface = Surface.from_plane(plane, bbox)
 
     points = surface.intersections_with_curve(outer)
@@ -81,3 +82,6 @@ for point in opoints_0:
 
 for point in ipoints_0:
     Artist(point).draw()
+
+for box in boxes:
+    Artist(box).draw()
